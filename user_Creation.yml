@@ -1,0 +1,13 @@
+---
+- name: user creation yml 
+  hosts: all
+  become: true 
+  vars_files:
+    - user.yml
+  tasks:
+  - name : user creation started 
+    user:
+      name: "{{username}}"
+      password: prasanta1234
+      state: present
+
